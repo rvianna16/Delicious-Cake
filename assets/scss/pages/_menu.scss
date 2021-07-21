@@ -1,0 +1,42 @@
+@use '../helpers/variables' as var;
+@use '../helpers/mixins';
+
+.menu {
+  padding: var.$padding-section;
+  position: relative;
+  .menu__title {
+    @include mixins.title-style;
+  }
+
+  .blop {
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+
+  .product {
+    margin-top: 60px;
+
+    .card__container {
+      display: grid;
+      grid-template-columns: repeat(2, 360px);
+      column-gap: 20px;
+    }
+
+    .product__title {
+      @include mixins.subtitle-style;
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      padding-left: 15px;
+      width: 870px;
+      height: 70px;
+      background-color: var.$primary-color;
+
+      &.bg {
+        background: none;
+        padding: 0;
+      }
+    }
+  }
+}

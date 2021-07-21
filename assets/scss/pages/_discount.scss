@@ -1,0 +1,33 @@
+@use '../helpers/variables' as var;
+@use '../helpers/mixins';
+
+.discount {
+  background-color: var.$primary-color;
+  text-align: center;
+  padding: var.$padding-section;
+
+  .discount__title {
+    @include mixins.title-style;
+    font-size: 38px;
+
+    .copom {
+      display: inline-block;
+      width: 74px;
+      background: url(../img/icons/copom-icon.svg);
+      background-position-y: -6.5px;
+    }
+  }
+
+  .discount__text {
+    font-size: var.$size-text;
+  }
+
+  .discount__icons {
+    @include mixins.flex;
+    padding-top: 30px;
+
+    img {
+      margin-right: 40px;
+    }
+  }
+}

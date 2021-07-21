@@ -1,0 +1,32 @@
+@use '../helpers/variables' as var;
+
+@font-face {
+  font-family: "Eczar";
+  src: url(../fonts/Eczar-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url(../fonts/WorkSans-Regular.ttf);
+}
+
+body {
+  font-family: var.$font-text;
+  color: var.$text-color;
+  background-color: var.$secondary-color;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+//Scrollbar
+::-webkit-scrollbar {
+  background: #fef6f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #873e4a;
+  border-radius: 10px;
+}

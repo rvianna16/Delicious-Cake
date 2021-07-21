@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <title>Delicious Cake</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="header__content container">
+      <a href="#"><img src="assets/img/delicious-logo.svg" alt="Delicious Cake" /></a>
+      <nav>
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#">Inicio</a></li>
+          <li class="menu__item"><a href="#">Sobre</a></li>
+          <li class="menu__item"><a href="#">Cardápio</a></li>
+          <li class="menu__item"><a href="#">Contato</a></li>
+          <li class="menu__item">
+            <a class="btn" href="#">Encomendar</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="waves-top"></div>
+    <div class="slider__container">
+      <div class="slider">
+        <div class="slide">
+          <div class="slide__background image1">
+            <h1 class="slide__title size2">
+              Experimente nossos deliciosos doces, tortas, salgados e muito
+              mais!
+            </h1>
+          </div>
+          <div class="slide__overlay"></div>
+        </div>
+        <div class="slide">
+          <div class="slide__background image2">
+            <h1 class="slide__title">
+              Confira nosso horário de funcionamento.
+            </h1>
+          </div>
+          <div class="slide__overlay"></div>
+        </div>
+        <div class="slide">
+          <div class="slide__background image3">
+            <h1 class="slide__title size1">
+              É sempre um prazer ter você aqui!
+            </h1>
+          </div>
+          <div class="slide__overlay"></div>
+        </div>
+      </div>
+      <div class="slider__controls">
+        <button id="prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="waves-bottom"></div>
+  </header>
+
+  <main>
+    <section class="about">
+      <div class="about__flex container">
+        <img class="about__img" src="assets/img/foto-sobre.png" alt="Menina fazendo um bolo" />
+        <div class="about__content">
+          <h2 class="about__title">Nossa história</h2>
+          <p class="about__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            aliquet nisl turpis, sollicitudin mollis nulla iaculis vitae.
+            Etiam sed justo id mi condimentum gravida ut vitae eros. Duis sed
+            euismod massa.
+          </p>
+          <p class="about__text">
+            Sed viverra congue quam, et blandit sem consequat id. Praesent
+            convallis eleifend felis, eget tristique nulla tempor et. Mauris
+            accumsan, ligula sed vehicula imperdiet, mi leo facilisis sem, et
+            mattis lacus enim id tellus.
+          </p>
+        </div>
+      </div>
+      <div class="about__icons">
+        <ul class="icons__list">
+          <li class="icons__item">
+            <img src="assets/img/icons/cake-icon.svg" alt="Ícone de bolo" />
+            <p>Sabor</p>
+          </li>
+          <li class="icons__item">
+            <img src="assets/img/icons/chef-icon.svg" alt="Ícone de chapéu de chefe de cozinha" />
+            <p>Comprometimento</p>
+          </li>
+          <li class="icons__item">
+            <img src="assets/img/icons/fast-icon.svg" alt="Ícone de um relógio" />
+            <p>Agilidade</p>
+          </li>
+          <li class="icons__item">
+            <img src="assets/img/icons/money-icon.svg" alt="Ícone de dinheiro" />
+            <p>Preço</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="menu container">
+      <h2 class="menu__title">Cardápio</h2>
+      <img class="blop" src="assets/img/blop-cake.png" />
+      <div class="menu__filter">
+        <input id="filter" type="text" placeholder="Filtrar produtos" />
+        <i class="fas fa-sort-down "></i>
+      </div>
+
+      <div class="dropdown">
+        <ul class="dropdown__list">
+          <li class="dropdown__item">Bolo</li>
+          <li class="dropdown__item">Cupcake</li>
+          <li class="dropdown__item">Salgado</li>
+          <li class="dropdown__item">Kitfesta</li>
+          <li class="dropdown__item">Torta</li>
+          <li class="dropdown__item">Brownie</li>
+          <li class="dropdown__item">Bebidas</li>
+        </ul>
+        <span class="warning">Não foi encontrado nenhum item</span>
+      </div>
+      <div class="tags__container"></div>
+
+      <div class="product__container">
+        <div class="product">
+          <h3 class="product__title bg">Novidades</h3>
+          <div class="card__container">
+            <div class="card">
+              <div class="card__content">
+                <h4 class="card__title">Torta de Prestígio</h4>
+                <p class="card__text">
+                  Uma deliciosa torta com recheio de beijinho e calda de
+                  chocolate.
+                </p>
+                <p class="card__price">A partir de: <strong>R$25,00</strong></p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/torta-prestigio.png"/>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__content ">
+                <h4 class="card__title">Brownie</h4>
+                <p class="card__text">Macio e saboroso.</p>
+                <p class="card__price">A partir de: <strong>R$5,00</strong></p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/brownie.png"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <h3 class="product__title">Kit festa</h3>
+          <div class="card__container">
+            <div class="card filter kitfesta">
+              <div class="card__content">
+                <h4 class="card__title">Kit Festa 01</h4>
+                <p class="card__text">
+                  1 Mini torta / 20 Docinhos variados / 30 Salgadinhos / 1
+                  Refrigerante de 2L
+                </p>
+                <p class="card__price">A partir de: <strong>R$65,00</strong></p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/kitfesta.png" />
+              </div>
+            </div>
+
+            <div class="card filter kitfesta">
+              <div class="card__content">
+                <h4 class="card__title">Kit Festa 02</h4>
+                <p class="card__text">
+                  1 Torta média / 50 Docinhos variados / 60 Salgadinhos / 10
+                  Cupcake / 1 Refrigerante de 2L.
+                </p>
+                <p class="card__price">
+                  A partir de: <strong>R$100,00</strong>
+                </p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/kitfesta.png" />
+              </div>
+            </div>
+
+            <div class="card filter kitfesta">
+              <div class="card__content">
+                <h4 class="card__title">Kit Festa 03</h4>
+                <p class="card__text">
+                  1 Torta média / 80 Docinhos variados / 100 Salgadinhos / 15
+                  Cupcake / 1 2 Refrigerantes de 2L.
+                </p>
+                <p class="card__price">
+                  A partir de: <strong>R$165,00</strong>
+                </p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/kitfesta.png" />
+              </div>
+            </div>
+
+            <div class="card filter kitfesta">
+              <div class="card__content">
+                <h4 class="card__title">Kit Festa 04</h4>
+                <p class="card__text">
+                  1 Torta Grande / 150 Docinhos variados / 200 Salgadinhos / 30
+                  Cupcake / 1 2 Refrigerantes de 2L.
+                </p>
+                <p class="card__price">
+                  A partir de: <strong>R$230,00</strong>
+                </p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/kitfesta.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <h3 class="product__title">Bolo de pote</h3>
+          <div class="card__container">
+            <div class="card filter bolo">
+              <div class="card__content">
+                <h4 class="card__title">Bolo de pote Delicious</h4>
+                <p class="card__text">
+                  Promoção de 3 bolo de pote pelo valor de dois!
+                </p>
+                <p class="card__price">A partir de: <strong>R$14,50</strong></p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/bolodepote1.png" />
+              </div>
+            </div>
+
+            <div class="card filter bolo">
+              <div class="card__content">
+                <h4 class="card__title">Mini bolo de pote</h4>
+                <p class="card__text">
+                  BOlo de pote em um tamanho menor que o normal.
+                </p>
+                <p class="card__price">
+                  A partir de: <strong>R$5,00</strong>
+                </p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/bolodepote2.png" />
+              </div>
+            </div>
+
+            <div class="card filter bolo">
+              <div class="card__content">
+                <h4 class="card__title">Bolo de pote</h4>
+                <p class="card__text">
+                  Delicioso bolo de pote.
+                </p>
+                <p class="card__price">
+                  A partir de: <strong>R$7,00</strong>
+                </p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/bolodepote3.png" />
+              </div>
+            </div>
+
+            <div class="card filter bolo">
+              <div class="card__content">
+                <h4 class="card__title">Bolo de pote Extreme</h4>
+                <p class="card__text">
+                  Bolo de pote por encomenda, leve a quantidade que precisar.
+                </p>
+                <p class="card__price">
+                  A partir de: <strong>R$70,00</strong>
+                </p>
+              </div>
+              <div class="card__img">
+                <img src="assets/img/products/bolodepote4.png" />
+                <span class="off">Indisponivel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discount">
+      <div class="discount__content container">
+        <h3 class="discount__title"> Obtenha <span class="copom">10%</span> de desconto na sua primeira compra!</h3>
+        <p class="discount__text">Aceitamos todas as bandeiras de cartão, vale refeição e pix</p>
+        <div class="discount__icons">
+          <img src="assets/img/icons/mastercard-icon.svg" alt="Mastercard">
+          <img src="assets/img/icons/alelo-icon.svg" alt="Alelo">
+          <img src="assets/img/icons/pix-con 1.svg" alt="Pix">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact ">
+      <h2 class="contact__title">Entre em contato conosco e faça o seu pedido!</h2>
+      <div class="contact__map">
+        <div class="contact__pin"></div>
+        <div class="contact__box container">
+          <div class="box">
+            <h3 class="box__title">Delicious Cake</h3>
+            <p class="box__text">A melhor doceria da região. Venha preparar a sua festa conosco!</p>
+
+            <h3 class="box__title">Contato</h3>
+            <p class="box__info"><i class="fas fa-map-marker-alt"></i> Rua Fulano de Tal, Centro - RJ</p>
+            <p class="box__info"><i class="fas fa-clock"></i>Seg a Sab - 09hr a 18hr</p>
+            <p class="box__info"><i class="fas fa-phone-alt"></i>(21) 99987-6543</p>
+
+            <button class="box__call btn">Enviar mensagem <i class="fab fa-whatsapp"></i></button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer_content container">
+      <img src="assets/img/delicious-logo.svg" alt="Delicious Cake">
+      <p class="copy"> Feito por Rodrigo Vianna @</p>
+      <div class="socials__icons">
+        <a class="socials__icon" href="http://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+        <a class="socials__icon" href="http://www.instagram.com"><i class="fab fa-instagram-square"></i></a>
+        <a class="socials__icon" href="#"><i class="fab fa-whatsapp-square"></i></a>
+
+
+
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="script.js" type="module"></script>
+
+</body>
+
+</html>

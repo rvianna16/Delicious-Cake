@@ -1,0 +1,17 @@
+@use 'variables' as var;
+
+@mixin title-style {
+  font-family: var.$font-title;
+  font-size: var.$size-title;
+}
+
+@mixin subtitle-style {
+  font-family: var.$font-title;
+  font-size: var.$size-subtitle;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

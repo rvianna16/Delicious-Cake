@@ -1,0 +1,47 @@
+@use '../helpers/variables' as var;
+@use '../helpers/mixins';
+
+.about {
+  background-color: var.$primary-color;
+  padding: var.$padding-section;
+  box-shadow: 0px 2px #f0ced3, 0px 1px #f0ced3;
+
+  .about__flex {
+    @include mixins.flex;
+  }
+
+  .about__content {
+    margin-left: 30px;
+
+    .about__title {
+      @include mixins.title-style;
+    }
+
+    .about__text {
+      font-size: var.$size-text;
+      line-height: 25px;
+      margin-bottom: 25px;
+      width: 465px;
+    }
+  }
+
+  .about__icons {
+    .icons__list {
+      @include mixins.flex;
+      margin-top: 50px;
+
+      .icons__item {
+        text-align: center;
+        margin-right: 100px;
+
+        p {
+          margin-top: 10px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use '../helpers/variables' as var;
+
+.footer {
+  background-color: var.$footer-color;
+  padding: var.$padding-section;
+
+  .footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .copy {
+      color: var.$light;
+      font-size: var.$size-text;
+    }
+
+    .socials__icons {
+      .socials__icon {
+        font-size: 35px;
+        color: var.$text-color;
+        margin-right: 35px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

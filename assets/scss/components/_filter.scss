@@ -1,0 +1,69 @@
+@use '../helpers/variables' as var;
+
+.menu__filter {
+  #filter {
+    background-color: var.$filter-color;
+    border: none;
+    border-radius: 6px;
+    color: var.$text-color;
+    font-size: var.$size-text;
+    margin-top: 10px;
+    width: 400px;
+    height: 50px;
+    outline: none;
+    padding: 15px;
+    font-weight: bold;
+
+    &::placeholder {
+      color: rgba(135, 62, 74, 0.3);
+      font-weight: normal;
+    }
+  }
+
+  i {
+    color: rgba(135, 62, 74, 0.3);
+    font-size: 20px;
+    position: relative;
+    left: -35px;
+    top: -2px;
+    z-index: 3000;
+
+    &.up {
+      top: 5px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+//tags//
+.tags__container {
+  width: 400px;
+  margin-top: 10px;
+
+  .tag {
+    background: var.$primary-color;
+    border-radius: 6px;
+    font-size: var.$size-legend;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    height: 30px;
+    padding: 5px 15px;
+
+    &::after {
+      content: 'x';
+      font-size: 18px;
+      margin-left: 20px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.hide,
+.warning,
+.hide2 {
+  display: none;
+}

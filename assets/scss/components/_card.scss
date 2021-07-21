@@ -1,0 +1,47 @@
+@use '../helpers/variables' as var;
+
+.card {
+  background-color: var.$card-color;
+  box-shadow: 0px 0px 2px #fef1f3, 0px 2px 2px #fef1f3, 0px 1px 3px #fef6f8;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 360px;
+  height: 160px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .card__title {
+    font-size: var.$size-text;
+  }
+
+  .card__text {
+    color: var.$legend-color;
+    margin-top: 10px;
+    width: 220px;
+    max-height: 80px;
+  }
+
+  .card__price {
+    margin-top: 30px;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .card__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .off {
+      background-color: #e58f9f;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-radius: 17px;
+      color: var.$light;
+      padding: 3px 8px;
+    }
+  }
+}
