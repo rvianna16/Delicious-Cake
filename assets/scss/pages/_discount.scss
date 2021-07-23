@@ -38,6 +38,7 @@
 
   @include mixins.for-phone {
     padding: var.$padding-section-mobile;
+    margin: 50px 0;
 
     .discount__title {
       font-size: 22px;
