@@ -1,47 +1,78 @@
 @use '../helpers/variables' as var;
+@use '../helpers/mixins';
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  column-gap: 20px;
 
-.card {
-  background-color: var.$card-color;
-  box-shadow: 0px 0px 2px #fef1f3, 0px 2px 2px #fef1f3, 0px 1px 3px #fef6f8;
-  border-radius: 20px;
-  margin-top: 20px;
-  width: 360px;
-  height: 160px;
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  .card__title {
-    font-size: var.$size-text;
-  }
-
-  .card__text {
-    color: var.$legend-color;
-    margin-top: 10px;
-    width: 220px;
-    max-height: 80px;
-  }
-
-  .card__price {
-    margin-top: 30px;
-    position: absolute;
-    bottom: 10px;
-  }
-
-  .card__img {
+  .card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    position: relative;
+    background-color: var.$card-color;
+    box-shadow: 0px 0px 2px #fef1f3, 0px 2px 2px #fef1f3, 0px 1px 3px #fef6f8;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    width: 360px;
+    height: 160px;
 
-    .off {
-      background-color: #e58f9f;
-      font-size: 14px;
-      text-transform: uppercase;
-      border-radius: 17px;
-      color: var.$light;
-      padding: 3px 8px;
+    .card__title {
+      font-size: var.$size-text;
+    }
+
+    .card__text {
+      color: var.$legend-color;
+      margin-top: 10px;
+      width: 220px;
+      max-height: 80px;
+    }
+
+    .card__price {
+      position: absolute;
+      bottom: 10px;
+      margin-top: 30px;
+    }
+
+    .card__img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .off {
+        position: absolute;
+        bottom: 10px;
+        background-color: #e58f9f;
+        border-radius: 17px;
+        color: var.$light;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 3px 8px;
+      }
+    }
+  }
+
+  @include mixins.for-phone {
+    display: block;
+
+    .card {
+      width: 335px;
+      .card__title {
+        font-size: var.$size-text-mobile;
+      }
+      .card__text {
+        font-size: var.$size-legend-mobile;
+        width: 200px;
+      }
+      .card__price {
+        font-size: var.$size-text-mobile;
+      }
+
+      .card__img {
+        width: 90px;
+        height: 90px;
+      }
     }
   }
 }

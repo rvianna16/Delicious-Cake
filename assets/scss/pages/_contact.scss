@@ -1,76 +1,140 @@
 @use '../helpers/variables' as var;
 @use '../helpers/mixins';
 
-.contact {
-  padding: var.$padding-section;
-  padding-bottom: 0;
-
+#contact {
   .contact__title {
     @include mixins.title-style;
     text-align: center;
   }
 
   .contact__map {
-    margin-top: 30px;
-    width: 100%;
-    height: 564px;
     background: url(../img/map.png) no-repeat;
     background-size: cover;
     background-position: center center;
     object-fit: contain;
-  }
+    margin-top: 30px;
+    width: 100%;
+    height: 564px;
 
-  .contact__pin {
-    position: relative;
-    left: 48.5%;
-    top: 170px;
-    width: 68px;
-    height: 103px;
-    background: url(../img/location-pin.png);
-    animation: pulse-pin 1.5s infinite;
-  }
+    .contact__pin {
+      position: relative;
+      left: 48.5%;
+      top: 170px;
+      background: url(../img/location-pin.png);
+      width: 68px;
+      height: 103px;
+      animation: pulse-pin 1.5s infinite;
+    }
 
-  .contact__box {
-    position: relative;
+    .contact__box {
+      position: relative;
 
-    .box {
-      width: 370px;
-      position: absolute;
-      top: -45px;
-      right: 0;
-      background: var.$secondary-color;
-      border-radius: 7px;
-      padding: 30px 15px;
-      box-shadow: 2px 2px var.$primary-color;
+      .box {
+        position: absolute;
+        top: -45px;
+        right: 0;
+        background: var.$secondary-color;
+        box-shadow: 2px 2px var.$primary-color;
+        border-radius: 7px;
+        padding: 30px 15px;
+        width: 370px;
 
-      .box__title {
-        @include mixins.subtitle-style;
-      }
+        .box__title {
+          @include mixins.subtitle-style;
+        }
 
-      .box__text {
-        line-height: 25px;
-        width: 280px;
-        font-size: var.$size-text;
-        margin-bottom: 30px;
-      }
+        .box__text {
+          font-size: var.$size-text;
+          line-height: 25px;
+          margin-bottom: 30px;
+          width: 280px;
+        }
 
-      .box__info {
-        padding-bottom: 13px;
+        .box__info {
+          padding-bottom: 13px;
 
-        i {
-          padding-right: 8px;
+          i {
+            padding-right: 8px;
+          }
+        }
+
+        .box__call {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 40px;
+          width: 340px;
+
+          i {
+            font-size: 35px;
+          }
         }
       }
+    }
+  }
 
-      .box__call {
-        margin-top: 40px;
-        width: 340px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  @include mixins.for-medium-screen {
+    .contact__title {
+      font-size: var.$size-title-medium;
+    }
 
-        i {
-          font-size: 35px;
+    .contact__map {
+      .contact__pin {
+        top: 190px;
+        left: 47%;
+      }
+    }
+  }
+
+  @include mixins.for-tablet {
+    .contact__map {
+      .contact__pin {
+        left: 47%;
+      }
+
+      .contact__box {
+        .box {
+          top: 240px;
+          left: 24%;
+        }
+      }
+    }
+  }
+  @include mixins.for-phone {
+    .contact__title {
+      font-size: var.$size-title-mobile;
+    }
+
+    .contact__map {
+      height: 350px;
+      .contact__pin {
+        top: 23%;
+        left: 43%;
+      }
+
+      .contact__box {
+        .box {
+          top: 100px;
+          left: 40px;
+          width: 250px;
+
+          .box__title {
+            font-size: var.$size-subtitle-mobile;
+          }
+
+          .box__text {
+            font-size: var.$size-text-mobile;
+            width: 200px;
+          }
+
+          .box__call {
+            width: 100%;
+            font-size: var.$size-text-mobile;
+
+            i {
+              font-size: 25px;
+            }
+          }
         }
       }
     }

@@ -8,32 +8,121 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: 50px 0;
   }
 
-  .menu__list {
+  #nav {
     @include mixins.flex;
-  }
 
-  .menu__item {
-    a {
-      text-transform: lowercase;
-      font-size: var.$size-text;
-      margin-left: 50px;
-      color: var.$text-color;
-      transition: 0.5s;     
+    .menu__list {
+      @include mixins.flex;
+      text-align: center;
+    }
 
-      &.btn {
-       text-transform: uppercase;
+    .menu__item {
+      a {
+        color: var.$text-color;
+        font-size: var.$size-text;
+        text-transform: lowercase;
+        margin-left: 50px;
+        transition: 0.5s;
+
+        &.btn {
+          text-transform: uppercase;
+        }
+
+        &:hover {
+          font-weight: bold;
+        }
       }
 
-      &:hover {
-        font-weight: bold;
+      &:last-child {
+        animation: btn-pulse 1.5s infinite;
       }
     }
 
-    &:last-child {
-      animation: btn-pulse 1.5s infinite;      
+    //responsive
+    @include mixins.for-medium-screen {
+      .menu__item {
+        a {
+          margin-left: 40px;
+        }
+      }
+    }
+
+    @include mixins.for-tablet {
+      #btn-mobile {
+        background: none;
+        border: none;
+        border-top: 3px solid;
+        cursor: pointer;
+        color: var.$text-color;
+        width: 30px;
+
+        &::after,
+        &::before {
+          content: '';
+          display: block;
+          background: currentColor;
+          margin-top: 7px;
+          width: 30px;
+          height: 3px;
+          transition: 0.3s;
+        }
+      }
+
+      .menu__list {
+        display: block;
+        position: absolute;
+        top: 134px;
+        left: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+        background: var.$primary-color;
+        width: 100%;
+        height: 0;
+        z-index: 500;
+        transition: 0.6s;
+
+        .menu__item {
+          padding: 40px 0;
+          text-align: center;
+
+          a {
+            padding: 40px 100px;
+            margin: 0;
+
+            &.btn {
+              padding: 15px 20px;
+            }
+          }
+
+          &:hover {
+            background: var.$secondary-color;
+          }
+        }
+      }
+
+      &.active {
+        #btn-mobile {
+          border-top: none;
+
+          &::after {
+            position: relative;
+            top: -10px;
+            transform: rotate(-135deg);
+          }
+          &::before {
+            transform: rotate(135deg);
+          }
+        }
+
+        .menu__list {
+          visibility: visible;
+          height: calc(100vh - 134px);
+        }
+      }
     }
   }
 }

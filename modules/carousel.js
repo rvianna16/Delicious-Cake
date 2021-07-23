@@ -1,10 +1,10 @@
 export default function initSlide() {
-  const sliderContainer = document.querySelector(".slider__container"),
-    slider = document.querySelector(".slider"),
-    nextBtn = document.getElementById("next-btn"),
-    prevBtn = document.getElementById("prev-btn");
+  const sliderContainer = document.querySelector('.slider__container'),
+    slider = document.querySelector('.slider'),
+    nextBtn = document.getElementById('next-btn'),
+    prevBtn = document.getElementById('prev-btn');
 
-  let slides = document.querySelectorAll(".slide"),
+  let slides = document.querySelectorAll('.slide'),
     currentSlideIndex = 0,
     time = 5000,
     slideId;
@@ -12,13 +12,13 @@ export default function initSlide() {
   const firstSlideClone = slides[0].cloneNode(true);
   const lastSlideClone = slides[slides.length - 1].cloneNode(true);
 
-  firstSlideClone.id = "first-clone";
-  lastSlideClone.id = "last-clone";
+  firstSlideClone.id = 'first-clone';
+  lastSlideClone.id = 'last-clone';
   slider.append(firstSlideClone);
   slider.prepend(lastSlideClone);
 
   function getSlides() {
-    return (slides = document.querySelectorAll(".slide"));
+    return (slides = document.querySelectorAll('.slide'));
   }
 
   function startSlide() {
@@ -33,7 +33,7 @@ export default function initSlide() {
     slider.style.transform = `translateX(${
       -slides[currentSlideIndex].clientWidth * currentSlideIndex
     }px)`;
-    slider.style.transition = ".7s";
+    slider.style.transition = '.7s';
   }
 
   function moveToPrevSlide() {
@@ -42,14 +42,14 @@ export default function initSlide() {
     slider.style.transform = `translateX(${
       -slides[currentSlideIndex].clientWidth * currentSlideIndex
     }px)`;
-    slider.style.transition = ".7s";
+    slider.style.transition = '.7s';
   }
 
   // Infinite slide //
-  slider.addEventListener("transitionend", () => {
+  slider.addEventListener('transitionend', () => {
     getSlides();
     if (slides[currentSlideIndex].id === firstSlideClone.id) {
-      slider.style.transition = "none";
+      slider.style.transition = 'none';
       currentSlideIndex = 1;
       slider.style.transform = `translateX(${
         -slides[currentSlideIndex].clientWidth * currentSlideIndex
@@ -57,7 +57,7 @@ export default function initSlide() {
     }
 
     if (slides[currentSlideIndex].id === lastSlideClone.id) {
-      slider.style.transition = "none";
+      slider.style.transition = 'none';
       currentSlideIndex = slides.length - 2;
       slider.style.transform = `translateX(${
         -slides[currentSlideIndex].clientWidth * currentSlideIndex
@@ -65,12 +65,12 @@ export default function initSlide() {
     }
   });
 
-  sliderContainer.addEventListener("mouseenter", () => {
+  sliderContainer.addEventListener('mouseenter', () => {
     clearInterval(slideId);
   });
-  sliderContainer.addEventListener("mouseleave", startSlide);
-  nextBtn.addEventListener("click", moveToNextSlide);
-  prevBtn.addEventListener("click", moveToPrevSlide);
+  sliderContainer.addEventListener('mouseleave', startSlide);
+  nextBtn.addEventListener('click', moveToNextSlide);
+  prevBtn.addEventListener('click', moveToPrevSlide);
 
   startSlide();
 }

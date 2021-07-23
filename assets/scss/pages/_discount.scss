@@ -5,6 +5,7 @@
   background-color: var.$primary-color;
   text-align: center;
   padding: var.$padding-section;
+  margin: 100px 0;
 
   .discount__title {
     @include mixins.title-style;
@@ -28,6 +29,29 @@
 
     img {
       margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include mixins.for-phone {
+    padding: var.$padding-section-mobile;
+
+    .discount__title {
+      font-size: 22px;
+
+      .copom {
+        background-size: 50px;
+        background-position-x: 12px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .discount__text {
+      font-size: var.$size-text-mobile;
+      margin-top: 15px;
     }
   }
 }

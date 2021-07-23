@@ -4,16 +4,15 @@
 //Waves
 .waves-top,
 .waves-bottom {
-  height: 14px;
   position: relative;
-  z-index: 2;
   background: url(../img/waves.png);
+  height: 14px;
+  z-index: 2;
 }
 
 .waves-top {
   top: 14px;
 }
-
 .waves-bottom {
   transform: rotate(180deg);
   top: -14px;
@@ -30,27 +29,25 @@
   height: 100%;
 
   .slide {
+    position: relative;
     min-width: 100%;
     width: 100%;
     height: 420px;
-    position: relative;
 
     .slide__background {
       @include mixins.flex;
-      width: 100%;
-      height: 420px;
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
+      width: 100%;
+      height: 420px;
 
       &.image1 {
         background-image: url(../img/cupcake.png);
       }
-
       &.image2 {
         background-image: url(../img/birthday-cake.png);
       }
-
       &.image3 {
         background-image: url(../img/cake.png);
       }
@@ -64,44 +61,99 @@
       &.size1 {
         width: 500px;
       }
-
       &.size2 {
         width: 905px;
       }
     }
 
     .slide__overlay {
-      background-color: rgb(135, 62, 74, 0.5);
+      position: absolute;
       top: 0;
+      background-color: rgb(135, 62, 74, 0.5);
       width: 100%;
       height: 100%;
-      position: absolute;
+    }
+  }
+
+  //responsive
+  @include mixins.for-medium-screen {
+    .slide {
+      .slide__title {
+        font-size: var.$size-title-medium;
+        &.size2 {
+          width: 630px;
+        }
+      }
+    }
+  }
+
+  @include mixins.for-tablet {
+    .slide {
+      .slide__title {
+        &.size2 {
+          width: 530px;
+        }
+      }
+    }
+  }
+
+  @include mixins.for-phone {
+    .slide {
+      height: 300px;
+
+      .slide__background {
+        height: 300px;
+      }
+
+      .slide__title {
+        font-size: var.$size-title-mobile;
+        &.size1 {
+          width: 260px;
+        }
+        &.size2 {
+          width: 260px;
+        }
+      }
     }
   }
 }
 
 //controls prev and next
 .slider__controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 
   #next-btn,
   #prev-btn {
+    background: #fef1f3;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 0 45px;
     width: 40px;
     height: 40px;
-    border-radius: 30px;
-    cursor: pointer;
-    background: #fef1f3;
-    border: none;
-    margin: 0 45px;
 
     i {
+      color: var.$text-color;
       font-size: var.$size-text;
       width: 25px;
+    }
+  }
+
+  @include mixins.for-phone {
+    #next-btn,
+    #prev-btn {
+      margin: 0 10px;
+      width: 30px;
+      height: 30px;
+
+      i {
+        font-size: var.$size-text-mobile;
+      }
     }
   }
 }

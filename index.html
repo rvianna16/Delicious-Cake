@@ -15,14 +15,18 @@
   <header id="header">
     <div class="header__content container">
       <a href="#"><img src="assets/img/delicious-logo.svg" alt="Delicious Cake" /></a>
-      <nav>
+      <nav id="nav">
+        <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-expanded="false"></button>
         <ul class="menu__list">
-          <li class="menu__item"><a href="#">Inicio</a></li>
-          <li class="menu__item"><a href="#">Sobre</a></li>
-          <li class="menu__item"><a href="#">Cardápio</a></li>
-          <li class="menu__item"><a href="#">Contato</a></li>
+          <li class="menu__item"><a href="#header">Inicio</a></li>
+          <li class="menu__item"><a href="#about">Sobre</a></li>
+          <li class="menu__item"><a href="#menu">Cardápio</a></li>
+          <li class="menu__item"><a href="#contact">Contato</a></li>
           <li class="menu__item">
-            <a class="btn" href="#">Encomendar</a>
+            <a class="btn" target="_blank"
+              href="https://api.whatsapp.com/send?phone=5521999455975&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20encomenda.">
+              Encomendar
+            </a>
           </li>
         </ul>
       </nav>
@@ -34,15 +38,14 @@
         <div class="slide">
           <div class="slide__background image1">
             <h1 class="slide__title size2">
-              Experimente nossos deliciosos doces, tortas, salgados e muito
-              mais!
+              Experimente nossos deliciosos doces, tortas e salgados.
             </h1>
           </div>
           <div class="slide__overlay"></div>
         </div>
         <div class="slide">
           <div class="slide__background image2">
-            <h1 class="slide__title">
+            <h1 class="slide__title size1">
               Confira nosso horário de funcionamento.
             </h1>
           </div>
@@ -70,7 +73,7 @@
   </header>
 
   <main>
-    <section class="about">
+    <section id="about">
       <div class="about__flex container">
         <img class="about__img" src="assets/img/foto-sobre.png" alt="Menina fazendo um bolo" />
         <div class="about__content">
@@ -89,7 +92,7 @@
           </p>
         </div>
       </div>
-      <div class="about__icons">
+      <div class="about__icons container">
         <ul class="icons__list">
           <li class="icons__item">
             <img src="assets/img/icons/cake-icon.svg" alt="Ícone de bolo" />
@@ -111,7 +114,7 @@
       </div>
     </section>
 
-    <section class="menu container">
+    <section id="menu" class="container">
       <h2 class="menu__title">Cardápio</h2>
       <img class="blop" src="assets/img/blop-cake.png" />
       <div class="menu__filter">
@@ -147,7 +150,7 @@
                 <p class="card__price">A partir de: <strong>R$25,00</strong></p>
               </div>
               <div class="card__img">
-                <img src="assets/img/products/torta-prestigio.png"/>
+                <img src="assets/img/products/torta-prestigio.png" />
               </div>
             </div>
 
@@ -158,7 +161,7 @@
                 <p class="card__price">A partir de: <strong>R$5,00</strong></p>
               </div>
               <div class="card__img">
-                <img src="assets/img/products/brownie.png"/>
+                <img src="assets/img/products/brownie.png" />
               </div>
             </div>
           </div>
@@ -309,8 +312,8 @@
       </div>
     </section>
 
-    <section class="contact ">
-      <h2 class="contact__title">Entre em contato conosco e faça o seu pedido!</h2>
+    <section id="contact">
+      <h2 class="contact__title container">Entre em contato conosco e faça o seu pedido!</h2>
       <div class="contact__map">
         <div class="contact__pin"></div>
         <div class="contact__box container">
@@ -321,9 +324,14 @@
             <h3 class="box__title">Contato</h3>
             <p class="box__info"><i class="fas fa-map-marker-alt"></i> Rua Fulano de Tal, Centro - RJ</p>
             <p class="box__info"><i class="fas fa-clock"></i>Seg a Sab - 09hr a 18hr</p>
-            <p class="box__info"><i class="fas fa-phone-alt"></i>(21) 99987-6543</p>
+            <p class="box__info"><i class="fas fa-phone-alt"></i>(21) 99945-5975</p>
 
-            <button class="box__call btn">Enviar mensagem <i class="fab fa-whatsapp"></i></button>
+            <a target="_blank"
+              href="https://api.whatsapp.com/send?phone=5521999999999&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20encomenda.">
+              <button class="box__call btn">Enviar mensagem
+                <i class="fab fa-whatsapp"></i>
+              </button>
+            </a>
 
           </div>
         </div>
@@ -332,18 +340,21 @@
   </main>
   <footer class="footer">
     <div class="footer_content container">
-      <img src="assets/img/delicious-logo.svg" alt="Delicious Cake">
+      <a href="#"><img src="assets/img/delicious-logo.svg" alt="Delicious Cake"></a>
       <p class="copy"> Feito por Rodrigo Vianna @</p>
       <div class="socials__icons">
-        <a class="socials__icon" href="http://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
-        <a class="socials__icon" href="http://www.instagram.com"><i class="fab fa-instagram-square"></i></a>
-        <a class="socials__icon" href="#"><i class="fab fa-whatsapp-square"></i></a>
-
-
-
+        <a class="socials__icon" href="http://www.facebook.com">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a class="socials__icon" href="http://www.instagram.com">
+          <i class="fab fa-instagram-square"></i>
+        </a>
+        <a class="socials__icon" target="_blank"
+          href="https://api.whatsapp.com/send?phone=5521999455975&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20encomenda.">
+          <i class="fab fa-whatsapp-square"></i>
+        </a>
       </div>
     </div>
-
   </footer>
 
   <script src="script.js" type="module"></script>

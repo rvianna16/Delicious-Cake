@@ -8,22 +8,32 @@ $card-color: #fff;
 $legend-color: #cf939c;
 $filter-color: #f6e4e6;
 $footer-color: #f0ced3;
-//Fonts
 
+//Fonts
 $font-title: 'Eczar';
 $font-text: 'Work Sans';
 
-//Desktop Size//
+//Desktop Size
 $size-title: 48px;
 $size-subtitle: 28px;
 $size-text: 18px;
 $size-legend: 16px;
 
-//Mobile Size //
+//Tablet and Medium Size {
+$size-title-medium: 40px;
+$size-subtitle-medium: 24px;
+
+//Mobile Size
 $size-title-mobile: 28px;
 $size-subtitle-mobile: 22px;
 $size-text-mobile: 16px;
 $size-legend-mobile: 12px;
 
-// Padding sections //
+//Padding sections
 $padding-section: 100px 0;
+$padding-section-mobile: 50px 0;
+
+//Breakpoints
+$mobile: 750px;
+$tablet: 900px;
+$medium-screen: 1099px;

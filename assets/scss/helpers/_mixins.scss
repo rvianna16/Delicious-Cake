@@ -15,3 +15,16 @@
   align-items: center;
   justify-content: center;
 }
+
+
+@mixin for-phone {
+  @media only screen and (max-width: var.$mobile) { @content; }
+}
+
+@mixin for-tablet{
+  @media only screen and (max-width: var.$tablet) { @content; }
+}
+
+@mixin for-medium-screen{
+  @media only screen and (max-width: var.$medium-screen) { @content; }
+}

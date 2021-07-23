@@ -1,27 +1,38 @@
 @use '../helpers/variables' as var;
+@use '../helpers/mixins';
 
 .dropdown {
+  position: absolute;
+  display: none;
+  overflow: auto;
   background-color: var.$filter-color;
   border-radius: 10px;
   margin-top: 10px;
-  width: 400px;
   padding: 10px 15px;
-  overflow: auto;
-  position: absolute;
-  display: none;
-  z-index: 200;
+  width: 400px;
   max-height: 200px;
+  z-index: 200;
   animation: drop 0.4s forwards;
 
   .dropdown__list {
     .dropdown__item {
-      padding: 20px 0;
       font-size: var.$size-text;
+      padding: 20px 0;
 
       &:hover {
-        cursor: pointer;
         background-color: var.$legend-color;
         color: var.$light;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include mixins.for-phone {
+    width: 300px;
+
+    .dropdown__list {
+      .dropdown__item {
+        font-size: var.$size-text-mobile;
       }
     }
   }

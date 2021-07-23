@@ -1,24 +1,25 @@
 @use '../helpers/variables' as var;
+@use '../helpers/mixins';
 
 @font-face {
-  font-family: "Eczar";
+  font-family: 'Eczar';
   src: url(../fonts/Eczar-Regular.ttf);
 }
 
 @font-face {
-  font-family: "Work Sans";
+  font-family: 'Work Sans';
   src: url(../fonts/WorkSans-Regular.ttf);
 }
 
 body {
-  font-family: var.$font-text;
-  color: var.$text-color;
   background-color: var.$secondary-color;
+  color: var.$text-color;
+  font-family: var.$font-text;
 }
 
 .container {
-  max-width: 1100px;
   margin: 0 auto;
+  max-width: 1100px;
 }
 
 //Scrollbar
@@ -29,4 +30,23 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #873e4a;
   border-radius: 10px;
+}
+
+//Responsive
+@include mixins.for-medium-screen {
+  .container {
+    max-width: 900px;
+  }
+
+  @include mixins.for-tablet {
+    .container {
+      max-width: 740px;
+    }
+  }
+
+  @include mixins.for-phone {
+    .container {
+      max-width: 335px;
+    }
+  }
 }

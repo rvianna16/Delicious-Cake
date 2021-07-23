@@ -1,18 +1,19 @@
 @use '../helpers/variables' as var;
+@use '../helpers/mixins';
 
 .menu__filter {
   #filter {
     background-color: var.$filter-color;
     border: none;
+    outline: none;
     border-radius: 6px;
     color: var.$text-color;
     font-size: var.$size-text;
+    font-weight: bold;
     margin-top: 10px;
+    padding: 15px;
     width: 400px;
     height: 50px;
-    outline: none;
-    padding: 15px;
-    font-weight: bold;
 
     &::placeholder {
       color: rgba(135, 62, 74, 0.3);
@@ -21,11 +22,11 @@
   }
 
   i {
+    position: relative;
+    top: -2px;
+    left: -35px;
     color: rgba(135, 62, 74, 0.3);
     font-size: 20px;
-    position: relative;
-    left: -35px;
-    top: -2px;
     z-index: 3000;
 
     &.up {
@@ -33,22 +34,29 @@
       transform: rotate(180deg);
     }
   }
+
+  @include mixins.for-phone {
+    #filter {
+      font-size: var.$size-text-mobile;
+      width: 300px;
+    }
+  }
 }
 
 //tags//
 .tags__container {
-  width: 400px;
   margin-top: 10px;
+  width: 400px;
 
   .tag {
+    display: inline-block;
+    height: 30px;
     background: var.$primary-color;
     border-radius: 6px;
     font-size: var.$size-legend;
-    display: inline-block;
+    padding: 5px 15px;
     margin-top: 15px;
     margin-right: 10px;
-    height: 30px;
-    padding: 5px 15px;
 
     &::after {
       content: 'x';
@@ -59,6 +67,10 @@
     &:hover {
       cursor: pointer;
     }
+  }
+
+  @include mixins.for-phone {
+    width: 300px;
   }
 }
 

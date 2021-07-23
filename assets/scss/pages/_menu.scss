@@ -1,9 +1,10 @@
 @use '../helpers/variables' as var;
 @use '../helpers/mixins';
 
-.menu {
-  padding: var.$padding-section;
+#menu {
   position: relative;
+  padding: var.$padding-section;
+
   .menu__title {
     @include mixins.title-style;
   }
@@ -17,25 +18,55 @@
   .product {
     margin-top: 60px;
 
-    .card__container {
-      display: grid;
-      grid-template-columns: repeat(2, 360px);
-      column-gap: 20px;
-    }
-
     .product__title {
-      @include mixins.subtitle-style;
       display: flex;
       align-items: center;
+      background-color: var.$primary-color;
       border-radius: 20px;
+      @include mixins.subtitle-style;
       padding-left: 15px;
       width: 870px;
       height: 70px;
-      background-color: var.$primary-color;
 
       &.bg {
         background: none;
         padding: 0;
+      }
+    }
+  }
+
+  @include mixins.for-medium-screen {
+    .menu__title {
+      font-size: var.$size-title-medium;
+    }
+    .blop {
+      width: 310px;
+    }
+  }
+
+  @include mixins.for-tablet {
+    .product {
+      .product__title {
+        width: 100%;
+      }
+    }
+  }
+
+  @include mixins.for-phone {
+    padding: var.$padding-section-mobile;
+
+    .menu__title {
+      font-size: var.$size-title-mobile;
+    }
+
+    .blop {
+      display: none;
+    }
+
+    .product {
+      .product__title {
+        font-size: var.$size-subtitle-mobile;
+        height: 50px;
       }
     }
   }
