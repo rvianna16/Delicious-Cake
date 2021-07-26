@@ -3,6 +3,7 @@
 
 #header {
   background-color: var.$primary-color;
+  
 
   .header__content {
     display: flex;
@@ -59,6 +60,7 @@
         cursor: pointer;
         color: var.$text-color;
         width: 30px;
+        
 
         &::after,
         &::before {
@@ -119,6 +121,7 @@
         }
 
         .menu__list {
+          
           visibility: visible;
           height: calc(100vh - 134px);
         }

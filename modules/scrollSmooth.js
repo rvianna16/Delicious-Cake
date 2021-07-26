@@ -5,14 +5,11 @@ export default function initScrollSmooth() {
     event.preventDefault();
 
     const href = event.currentTarget.getAttribute('href'),
-      section = document.querySelector(href),
-      nav = document.getElementById('nav');
+      section = document.querySelector(href);
 
     section.scrollIntoView({
       behavior: 'smooth',
-    });
-
-    nav.classList.remove('active');
+    });        
   }
 
   links.forEach((link) => {

@@ -1,22 +1,31 @@
 export default function initMenuMobile() {
-  const btnMobile = document.getElementById('btn-mobile');
+  const btnMobile = document.getElementById("btn-mobile");
 
   function toggleMenu(event) {
-    if (event.type === 'touchstart') event.preventDefault();
+    if (event.type === "touchstart") event.preventDefault();
 
-    const nav = document.getElementById('nav'),
-      isActive = nav.classList.contains('active');
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("active");
 
-    nav.classList.toggle('active');
+    const isActive = nav.classList.contains("active");
 
-    event.currentTarget.setAttribute('aria-expanded', isActive);
+    btnMobile.setAttribute("aria-expanded", isActive);
+
     if (isActive) {
-      event.currentTarget.setAttribute('aria-label', 'Fechar menu');
+      btnMobile.setAttribute("aria-label", "Fechar menu");
+      document.addEventListener("scroll", scrollOutMenu);
     } else {
-      event.currentTarget.setAttribute('aria-label', 'Abrir menu');
+      btnMobile.setAttribute("aria-label", "Abrir menu");
+      document.removeEventListener("scroll", scrollOutMenu);
     }
   }
 
-  btnMobile.addEventListener('click', toggleMenu);
-  btnMobile.addEventListener('touchstart', toggleMenu);
+  function scrollOutMenu(e) {
+    if (nav.getBoundingClientRect().top < -400) {
+      toggleMenu(e);
+    }
+  }
+
+  btnMobile.addEventListener("click", toggleMenu);
+  btnMobile.addEventListener("touchstart", toggleMenu);
 }
