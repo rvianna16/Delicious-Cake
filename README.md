@@ -17,9 +17,9 @@
 ## :bulb: Sobre o projeto
 
  **Delicious Cake** - Este é o primeiro projeto em que faço onde tudo foi desenvolvido 100% por mim, inclusive o layout.
- <br>A ídeia era praticar um pouco os conceitos de UI e melhorar minhas habilidades com a ferramenta Figma. Depois do layout pronto, resolvi codificar e para melhorar minha lógica e habilidade com o JavaScript, resolvi não utilizar nenhum plugin do mesmo. 
+ <br>A ídeia era praticar um pouco os conceitos de UI e melhorar minhas habilidades com a ferramenta Figma. Depois do layout pronto, resolvi codificar e para melhorar minha lógica e habilidade com o JavaScript, não utilizei nenhum plugin.
  <br><br>Tentei pensar e simular um projeto, por mais que simples, fosse baseado em nossa realidade.
- <br>A pandemia dificultou a vida de muita gemte, e como uma forma de conseguir uma renda, as vendas caseiras de bolos, doces, comida e outros produtos aumentaram ainda mais.
+ <br>A pandemia dificultou a vida de muita gente, e como uma forma de conseguir uma renda, as vendas caseiras de bolos, doces, comida e outros produtos aumentaram ainda mais.
  <br>Pensando nisso, o Delicious Cake, é uma doceria com foco em festas, e o site foi desenvolvido como uma forma de mostrar seus produtos e atingir um publico maior de consumidores. 
 
 ---
