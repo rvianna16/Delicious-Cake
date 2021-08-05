@@ -49,8 +49,7 @@ export default function initFilter() {
     tags.forEach((tag) => {
       const filteredProducts = productsContainer.getElementsByClassName(
         tag.innerText.toLowerCase()
-      );
-      console.log(filteredProducts);
+      );      
 
       Array.from(filteredProducts).forEach((filteredProduct) => {
         filteredProduct.parentNode.parentNode.classList.remove('hide');

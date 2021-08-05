@@ -1,6 +1,6 @@
 export default function initDropDown() {
   const input = document.querySelector('#filter');
-  const arrowIcon = document.querySelector('.menu i');
+  const arrowIcon = document.querySelector('#menu i');  
 
   input.addEventListener('focus', () => {
     dropDown(0);
